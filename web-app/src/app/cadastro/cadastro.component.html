@@ -1,0 +1,25 @@
+<div class="w3-card-4 w3-dark-grey" style="width: 500px; margin-left: 690px;">
+    
+    <H2>Perfil de {{ usuario }}</H2>
+    <P>Profissão {{ profissao }}</P>
+
+    <div *ngIf="exibe" class="w3-container w3-center">
+      <h3>I am Good of War</h3>
+      <img src="/assets/kratos.jpg" alt="Avatar" style="width:30%">
+      <h5>Kratus</h5>
+    
+    <div *ngFor= "let certification of lista">
+
+      <div class="alert alert-primary" role="alert">
+            {{certification.cert}}
+
+      </div>
+      
+
+    </div>  
+    </div>
+
+    <button class="w3-button w3-green" (click)="exibePerfil()" >Exibir</button>
+    <button class="w3-button w3-red" (click)="ocultar()">No Exibir</button>
+
+    </div>
